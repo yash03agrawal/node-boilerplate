@@ -1,7 +1,12 @@
+import cors from 'cors';
 import express from 'express';
 import { ErrorHandler } from './errorhandler';
 
 const app = express();
+/**
+ * required to be run in local
+ */
+app.use(cors());
 app.use(express.json());
 
 const dummyRouter = express.Router();
